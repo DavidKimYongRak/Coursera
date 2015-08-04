@@ -44,8 +44,8 @@ first_five_pows_two = { 2**x for x in {0,1,2,3,4} }
 # Assign three-element sets to X1 and Y1 so that
 # {x*y for x in X1 for y in Y1} evaluates to a nine-element set.
 
-X1 = { ..., ..., ... }
-Y1 = { ..., ..., ... }
+X1 = { 1, 2, 3 }
+Y1 = { 10,11,12 }
 
 
 
@@ -53,8 +53,8 @@ Y1 = { ..., ..., ... }
 # Assign disjoint three-element sets to X1 and Y1 so that
 # {x*y for x in X1 for y in Y1} evaluates to a five-element set.
 
-X2 = { ..., ..., ... }
-Y2 = { ..., ..., ... }
+X2 = { 0, 1, 2 }
+Y2 = { 4, 8, 16 }
 
 
 
@@ -62,7 +62,7 @@ Y2 = { ..., ..., ... }
 S = {1, 2, 3, 4}
 T = {3, 4, 5, 6}
 # Replace { ... } with a one-line set comprehension that evaluates to the intersection of S and T
-S_intersect_T = { ... }
+S_intersect_T = { x for x in S for y in T if x == y }
 
 
 
@@ -71,7 +71,7 @@ list_of_numbers = [20, 10, 15, 75]
 # Replace ... with a one-line expression that evaluates to the average of list_of_numbers.
 # Your expression should refer to the variable list_of_numbers, and should work
 # for a list of any length greater than zero.
-list_average = ... 
+list_average = sum(list_of_numbers) / len(list_of_numbers)
 
 
 
